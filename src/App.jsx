@@ -1,11 +1,11 @@
 import './App.css'
-import Title from './component/Title'
+import Header from './component/Header';
 
 function App() {
 
   return (
     <>
-      <Title />
+      <Header />
     </>
   )
 }
