@@ -14,7 +14,8 @@ body {
 .header {
     display: flex;
     justify-content: space-around;
-    text-align: center;
+    align-items: center;
+    /* text-align: center; */
     background-color: darkslategrey;
     padding: 10px;
 }
@@ -28,4 +29,39 @@ body {
     list-style: none;
     font-size: 18px;
     color: #fff;
+}
+
+/* Restaurant Card */
+
+.res-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.res-card {
+    margin: 5px;
+    padding: 5px;
+    width: 200px;
+    height: 300px;
+}
+
+.res-card:hover {
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.res-logo {
+    max-width: 100%;
+}
+
+.search {
+    padding: 10px;
+}
+
+.res-card h4 {
+    font-size: 18px;
+    font-weight: 400;
+    padding-block: 5px;
+    color: rgba(26, 25, 25, 0.63);
 }
