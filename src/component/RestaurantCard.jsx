@@ -1,12 +1,16 @@
 import React from 'react'
 
-function RestaurantCard() {
+
+function RestaurantCard(props) {
+    const { resData } = props;
     return (
         <div className='res-card' style={{ backgroundColor: "#f0f0f0" }}>
-            <img className='res-logo' src="https://images.unsplash.com/photo-1581184953987-5668072c8420?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE4fHx8ZW58MHx8fHx8" alt="res-logo" />
-            <h3>Meghana Foods</h3>
-            <h4>Biryani, North Indian, Asian</h4>
-            <h4>38 minutes</h4>
+            <img className='res-logo' src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + resData.info.cloudinaryImageId} alt="res-logo" />
+            <h3>{resData.info.name}</h3>
+            <h4>{resData.info.cuisines.join(", ")}</h4>
+            <h4>{resData.info.avgRating} stars</h4>
+            <h4>{resData.info.costForTwo} stars</h4>
+            <h4>{resData.info.sla.deliveryTime} minutes</h4>
         </div>
     )
 }
